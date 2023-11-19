@@ -9,8 +9,11 @@
 
     /* Font Size */
     --font-size-base: 1rem;
+    --h1-size: calc(1.5 * var(--font-size-base));
+    --h2-header-size: calc(1.2 * var(--font-size-base));
+    --h2-size: calc(1.3 * var(--font-size-base));
+    --h3-size: calc(1.1 * var(--font-size-base));
 
-  
     /* Line Height */
     --line-height-body: 1.3;
     --line-height-text: calc(1ex / 0.32);
@@ -47,7 +50,7 @@ body {
     font-size: var(--font-size-base);
     color: var(--color--contrast);
     margin: 2rem auto 2rem;
-    max-width: 100ch;
+    max-width: 70ch;
 }
 
 header {
@@ -65,30 +68,15 @@ header {
 }
 
 header h1 {
+    font-size: var(--h1-size);
     margin: 0;
 }
 
-nav ul {
-    list-style: none;
-    text-align: center;
-    background: #333;
-    font-family: 'Roboto', sans-serif; /* Font for navigation */
+header h2 {
+    font-size: var(--h2-header-size);
+    font-weight: 100;
 }
 
-nav ul li {
-    display: inline;
-}
-
-nav ul li a {
-    color: white;
-    padding: 0.5rem 1rem;
-    display: inline-block;
-    text-decoration: none;
-}
-
-nav ul li a:hover {
-    background-color: #007bff;
-}
 
 main {
     padding: 20px;
@@ -101,12 +89,55 @@ section {
 }
 
 section h2 {
-    margin-bottom: 10px;
+    font-size: var(--h2-size);
+    margin: 0rem 0 1rem 0;
+}
+
+section h3 {
+    font-size: var(--h3-size);
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+section h3 a {
+    text-decoration: none;color: var(--color--contrast);
 }
 
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 0px;
+}
+
+ul.profile-list {
+    list-style: none;
+    padding: 0;
+}
+
+.profile-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Adjust as needed for spacing */
+}
+
+.profile-avatar {
+    border-radius: 50%; /* Makes the image round */
+    margin-right: 15px; /* Spacing between image and text */
+    width: 60px; /* Adjust size as needed */
+    height: 60px; /* Adjust size as needed */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+.profile-text {
+    display: flex;
+    flex-direction: column;
+}
+
+h3.profile-title {
+    margin: 0 0 5px 0; /* Adjust spacing as needed */
+}
+
+p.profile-description {
+    text-align: left;
 }
 
 /* Responsive design */
