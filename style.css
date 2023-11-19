@@ -20,7 +20,7 @@
   
     /* Margin */
     --margin-top-post: calc(1ex / 0.64);
-    --page-guter: 1rem;
+    --page-guter: 2rem;
   
     /* Font Size */
   
@@ -51,10 +51,11 @@ body {
     color: var(--color--contrast);
     margin: 2rem auto 2rem;
     max-width: 70ch;
+    padding:0 var(--page-guter)
 }
 
 header {
-    padding: 1rem 0;
+    padding: 2rem 0;
     text-align: center;
     font-family: 'Roboto', sans-serif; /* Explicit font for header */
 }
@@ -79,7 +80,6 @@ header h2 {
 
 
 main {
-    padding: 20px;
     text-align: center;
 }
 
